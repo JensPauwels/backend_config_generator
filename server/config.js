@@ -1,7 +1,7 @@
 const configuration = {
-  Network: [
+  Entity: [
     {
-      name: 'hostname',
+      name: 'name',
       labelName: 'hostname',
       type: 'text',
       placeholder: '',
@@ -11,34 +11,12 @@ const configuration = {
       listOptions: []
     },
     {
-      name: 'ipv4',
-      labelName: 'ipv4',
-      type: 'text',
-      defaultValue: '',
-      placeholder: '',
-      validationOption: 'input',
-      validationMessage : '', 
-      listOptions: []
-    },
-    {
-      name: 'ipv6',
-      labelName: 'ipv6',
+      name: 'rules',
+      labelName: 'rules',
       type: 'text',
       placeholder: '',
-      defaultValue: '',
-      validationOption: 'input',
-      validationMessage : '', 
-      listOptions: []
-    },
-  ],
-  User: [
-    {
-      name: 'firstName',
-      labelName: 'firstName',
-      type: 'text',
-      placeholder: '',
-      defaultValue: '',
-      validationOption: 'input',
+      defaultValue: '[]',
+      validationOption: 'undefined',
       validationMessage : '', 
       listOptions: []
     }

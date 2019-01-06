@@ -18,9 +18,17 @@ export default class Model {
     }, '');
   };
 
+  setDefaultValue = param => {
+    if (param !== undefined && param !== '') {
+      return `, ${param}`;
+    };
+
+    return '';
+  };
+
   createParams = params => {
     return params.reduce((content, param, index) => {
-      return content += `this.${param.name} = param(data, '${param.name}');${this.addNewLine(params, index)}`;
+      return content += `this.${param.name} = param(data, '${param.name}'${this.setDefaultValue(param.defaultValue)});${this.addNewLine(params, index)}`;
     }, '');
   };
 
