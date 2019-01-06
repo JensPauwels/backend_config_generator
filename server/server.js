@@ -6,10 +6,7 @@ const createDirectory = directory => {
   return new Promise((resolve, reject) => {
     if (!fs.existsSync(directory)) {
       fs.mkdirSync(directory);
-    } 
-    // else {
-    //   fs.removeSync(directory);
-    // };
+    };
 
     resolve(true);
   });
@@ -23,6 +20,7 @@ const saveFile = (fileName, content) => {
         return;
       };
 
+      console.log(`created ${fileName}`);
       resolve(res);
     });
   });
